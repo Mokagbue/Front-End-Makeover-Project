@@ -9,7 +9,7 @@ function NotesList(props) {
             <div>
                 {props.notes.map((note, index) => (
                     <div key={index}>
-                        <Link to={`/notes/${note.notes_id}`}>
+                        <Link to={`/notes/${note.id}`}>
                             <h3>{note.notes_title}</h3>
                         </Link>
                         <p>{note.notes_content}</p>

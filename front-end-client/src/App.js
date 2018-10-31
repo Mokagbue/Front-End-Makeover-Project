@@ -25,25 +25,26 @@ class App extends Component {
   }
 
   grabAllNotes = () => {
-    axios.get('https://localhost:9000/api/notes')
+    console.log("getting notes?", this.state);
+    axios.get('http://localhost:8000/api/notes')
     .then(response => this.setState({ ...this.state, notes: response.data }))
     .catch(error => console.log(error));
   }
 
   makeNewNote = (note) => {
-    axios.post('https://localhost:9000/api/notes', note)
+    axios.post('http://localhost:8000/api/notes', note)
     .then(response => this.grabAllNotes())
     .catch(error => console.log(error));
   }
 
   deleteNote = (id) => {
-    axios.delete(`https://localhost:9000/api/notes/${id}`)
+    axios.delete(`://localhost:8000/api/notes/${id}`)
     .then(response => this.grabAllNotes())
     .catch(error => console.log(error));
   }
 
   updateNote = (id, updatedNote) => {
-    axios.put(`https://localhost:9000/api/notes/${id}`, updatedNote)
+    axios.put(`http://localhost:8000/api/notes/${id}`, updatedNote)
     .then(response => this.grabAllNotes())
     .catch(error => console.log(error));
   }
@@ -56,12 +57,12 @@ class App extends Component {
         <h1>Lambda Notes</h1>
           <nav>
             <NavLink exact to="/"> Home</NavLink>
-            <NavLink  to="/notes"> Notes</NavLink>
-            <NavLink  to="/newNote">Make New Note</NavLink>
+            <NavLink exact to="/notes"> Notes</NavLink>
+            <NavLink  to="/newNotes">Make New Note</NavLink>
           </nav>
           <main>
             <Route exact path="/" component={Home}></Route>
-            <Route path="/notes" render={(props) =>
+            <Route exact path="/notes" render={(props) =>
               (<NotesList {...props} notes={this.state.notes} />)} />
             <Route path="/newNotes" render={(props) =>
               (<NotesForm {...props} makeNewNote={this.makeNewNote} />)} />  

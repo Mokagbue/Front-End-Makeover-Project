@@ -16,11 +16,11 @@ class Note extends Component {
         }
     }
     componentDidMount() {
-        const note_Id = this.props.match.params.id;
-        this.grabById(note_Id)
+        const noteId = this.props.match.params.id;
+        this.grabById(noteId)
     }
     grabById = (id) => {
-        axios.get(``)
+        axios.get(`http://localhost:8000/api/notes/${id}`)
         .then(response => {
             const note = {
                 id: response.data.id,
@@ -34,11 +34,24 @@ class Note extends Component {
         })
         .catch(error => console.log(error));
     }
+    deleteButton = () => {
+        const id = this.props.match.params.id;
+        this.props.history.push(`/deleteNote/${id}`)
+    }
+    updateButton = () => {
+        const id = this.props.match.params.id;
+        this.props.history.push(`/updateNote/${id}`)
+    }
+    
     render() {
         return (
             <div>
                 <h1>{this.state.note.notes_title}</h1>
                 <p>{this.state.note.notes_content}</p>
+                <div>
+                    <div onClick={() => this.deleteButton()}>Delete Note?</div>
+                    <div onClick={() => this.updateButton()}>Update Note?</div>
+                </div>
             </div>
         )
     }
