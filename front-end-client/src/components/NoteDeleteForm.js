@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
 
 class NoteDeleteForm extends Component {
     constructor(props) {
@@ -18,7 +17,7 @@ class NoteDeleteForm extends Component {
     render() {
         return (
             <div>
-                <h2>Are you sure?</h2>
+                <h2>Are you sure? It's such a lovely note...</h2>
                 <div className="deleteButts">
                     <div onClick={() => this.deleteHandler()}>Delete Note!</div>
                     <div onClick={() => this.returnToNote()}>Never Mind!</div>

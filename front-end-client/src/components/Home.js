@@ -11,7 +11,7 @@ function Home() {
             <p className="homeP">A local habitation and a name..."</p>
             <h3 className="quoteAuthor">- William Shakespeare (Midsummer Night's Dream)</h3>
 
-            <Link className="homeEnterButton" exact to="/notes">Enter</Link>
+            <Link className="homeEnterButton" to="/notes">Enter</Link>
         </div>
     );
 }

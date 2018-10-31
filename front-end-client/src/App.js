@@ -34,19 +34,19 @@ class App extends Component {
   makeNewNote = (note) => {
     axios.post('http://localhost:8000/api/notes', note)
     .then(response => this.grabAllNotes())
-    .catch(error => console.log(error));
+    .catch(error => console.log({ message:"failed to make new note", error}));
   }
 
   deleteNote = (id) => {
-    axios.delete(`://localhost:8000/api/notes/${id}`)
+    axios.delete(`http://localhost:8000/api/notes/${id}`)
     .then(response => this.grabAllNotes())
-    .catch(error => console.log(error));
+    .catch(error => console.log({ message:"failed to delete note", error}));
   }
 
   updateNote = (id, updatedNote) => {
     axios.put(`http://localhost:8000/api/notes/${id}`, updatedNote)
     .then(response => this.grabAllNotes())
-    .catch(error => console.log(error));
+    .catch(error => console.log({ message:"failed to update note", error}));
   }
 
 
@@ -54,12 +54,14 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-        <h1>Lambda Notes</h1>
-          <nav>
-            <NavLink exact to="/"> Home</NavLink>
-            <NavLink exact to="/notes"> Notes</NavLink>
-            <NavLink  to="/newNotes">Make New Note</NavLink>
+        <div className="navigation-box">
+          <nav className="nav">
+            <NavLink exact to="/" className="navigation-buttons"> Home</NavLink>
+            <NavLink exact to="/notes" className="navigation-buttons"> Notes</NavLink>
+            <NavLink  to="/newNotes" className="navigation-buttons">Make New Note</NavLink>
           </nav>
+          <h1 className="main-header">Lambda Notes</h1>
+        </div>
           <main>
             <Route exact path="/" component={Home}></Route>
             <Route exact path="/notes" render={(props) =>

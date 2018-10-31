@@ -30,3 +30,23 @@
     transform: rotate(360deg);
   }
 }
+
+/*Stylings*/
+
+/*Navigation*/
+.navigation-box {
+  display: flex;
+  flex-direction: row;
+  background: 1px solid yellow;
+  
+
+}
+.navigation-buttons {
+  display: flex;
+  flex-direction: column;
+  color: red;
+
+}
+.main-header {
+
+}
