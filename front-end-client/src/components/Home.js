@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 function Home() {
     return (
         <div className="homeBox">
+            <h1 className="home-title">ʕ•ᴥ•ʔ Lambda Notes ʕ•ᴥ•ʔ</h1>
             <p className="homeP">"And as imagination bodies forth</p> 
             <p className="homeP">The forms of things unkown,</p>
             <p className="homeP">The poets pen</p>

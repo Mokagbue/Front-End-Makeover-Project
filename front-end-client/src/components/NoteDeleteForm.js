@@ -16,11 +16,11 @@ class NoteDeleteForm extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="note-deleteFormBox">
                 <h2>Are you sure? It's such a lovely note...</h2>
                 <div className="deleteButts">
-                    <div onClick={() => this.deleteHandler()}>Delete Note!</div>
-                    <div onClick={() => this.returnToNote()}>Never Mind!</div>
+                    <div className="input-button" onClick={() => this.deleteHandler()}>Delete Note!</div>
+                    <div className="input-button" onClick={() => this.returnToNote()}>Never Mind!</div>
                 </div>
             </div>
         )

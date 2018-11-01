@@ -53,14 +53,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
         <div className="navigation-box">
+        <h1 className="main-header">Lambda Notes</h1>
           <nav className="nav">
             <NavLink exact to="/" className="navigation-buttons"> Home</NavLink>
             <NavLink exact to="/notes" className="navigation-buttons"> Notes</NavLink>
             <NavLink  to="/newNotes" className="navigation-buttons">Make New Note</NavLink>
           </nav>
-          <h1 className="main-header">Lambda Notes</h1>
         </div>
           <main>
             <Route exact path="/" component={Home}></Route>
@@ -75,7 +74,6 @@ class App extends Component {
             <Route path="/updateNote/:id" render={(props) =>
               (<NoteUpdateForm {...props} updateNote={this.updateNote} />)} />
           </main>
-        </header>
       </div>
     );
   }

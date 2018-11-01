@@ -22,16 +22,16 @@ class NotesForm extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="note-formBox">
                 <h2>Making A New Note?</h2>
-                <form onSubmit={this.makingNewNote}>
-                    <input type="text" placeholder="add a title!" name="notes_title"
+                <form className="note-form" onSubmit={this.makingNewNote}>
+                    <input className="input-title" type="text" placeholder="add a title!" name="notes_title"
                         onChange={this.handleChange}
                         value={this.state.notes_title} />
-                    <textarea type="text" placeholder="what's on your mind?" name="notes_content"
+                    <textarea className="input-content" type="text" placeholder="what's on your mind?" name="notes_content"
                         onChange={this.handleChange}
                         value={this.state.notes_content} />
-                    <button type="submit">Ready to Post?</button>
+                    <button className="input-button" type="submit">Ready to Post?</button>
                 </form>
             </div>
         )

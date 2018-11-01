@@ -1,13 +1,18 @@
 .App {
   text-align: center;
+  display: flex;
+  background-color: #282c34;
+  color: white;
+  min-width: 300px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right:auto;
+  width: 100%;
+  height: 1000px;
+  
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -16,37 +21,194 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 /*Stylings*/
 
-/*Navigation*/
+/* Home Stylings */
+.home-title {
+  border-bottom: 1px solid teal;
+  padding: 5px;
+}
+
+.homeBox {
+  margin-left: 3%;
+  margin-top: 35%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid teal;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.homeP {
+  font-size: 1rem;
+  margin: 5px;
+}
+.quoteAuthor {
+
+}
+.homeEnterButton {
+  color: red;
+  border:1px solid rgb(1, 99, 99);
+  background-color: #0CDDD3;
+  box-shadow: 5px 5px 5px teal;
+  width: 40%;
+  padding: 5px;
+  margin-left: 20%;
+  margin-right: 20%;
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+/*Navigation Bar Styling*/
 .navigation-box {
   display: flex;
-  flex-direction: row;
-  background: 1px solid yellow;
-  
-
+  flex-direction: column;
+  border: 1px solid teal;
+  background-color: rgb(49, 38, 80);
+  align-items: center;
+  width: 40%;
 }
 .navigation-buttons {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  height: 150%;
   color: red;
+  border:1px solid rgb(1, 99, 99);
+  background-color: #0CDDD3;
+  box-shadow: 5px 5px 5px teal;
+  padding: 15px;
+  margin: 10px;
 
 }
-.main-header {
 
+/* Note List Styles */
+
+.list-wrap {
+  display: flex;
+  margin-right: auto;
+  margin-left: auto;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+.note-wrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.note-card {               
+  border: 1px solid teal;
+  width: 35%;
+  height: 150px;
+  /* background-color: rgb(30, 31, 36); */
+  margin: 10px;
+}
+
+/* Note Stylings */
+.note-box {
+}
+.a-note {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20%;
+  margin-top: 20%;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  border: 1px teal solid;
+  padding: 10px;
+}
+
+.note-title {
+  border-bottom: 1px solid teal;
+  padding: 5px;
+}
+.note-content {
+  border: 1px solid teal;
+  background-color: rgb(73, 73, 73);
+  height:100%;
+  padding: 10px;
+  margin: 30px;
+}
+.note-buttonwrap {
+  display: flex;
+  flex-direction: row;
+}
+.note-buttons {
+  color: red;
+  border:1px solid rgb(1, 99, 99);
+  background-color: #0CDDD3;
+  box-shadow: 5px 5px 5px teal;
+  width: 40%;
+  padding: 5px;
+  margin: 10px;
+}
+
+/* Form Styling */
+.note-formBox {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20%;
+  margin-top: 35%;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  border: 1px teal solid;
+  padding: 10px;
+
+}
+.note-form {
+  display: flex;
+  flex-direction: column;
+}
+.input-title {
+  margin: 10px;
+}
+.input-content {
+  height: 200px;
+  margin: 10px;
+}
+.input-button {
+  color: red;
+  border:1px solid rgb(1, 99, 99);
+  background-color: #0CDDD3;
+  box-shadow: 5px 5px 5px teal;
+  width: 40%;
+  padding: 5px;
+  margin: 10px;
+}
+/* Delete Form Stylings */
+.note-deleteFormBox {
+  display: flex;
+  flex-direction: column;
+  margin-top: 35%;
+  margin-left: 30%;
+  border: 1px solid teal;
+}
+.deleteButts {
+  display: flex;
+  flex-direction: row;
+}
+/* Update Form Stylings  */
+.note-updateFormBox {
+  display: flex;
+  flex-direction: column;
+  margin-left: 0%;
+  margin-top: 35%;
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  border: 1px teal solid;
+  padding: 10px;
 }

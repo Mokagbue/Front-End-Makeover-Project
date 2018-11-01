@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 import '../App.css';
@@ -45,12 +44,14 @@ class Note extends Component {
     
     render() {
         return (
-            <div>
-                <h1>{this.state.note.notes_title}</h1>
-                <p>{this.state.note.notes_content}</p>
-                <div>
-                    <div onClick={() => this.deleteButton()}>Delete Note?</div>
-                    <div onClick={() => this.updateButton()}>Update Note?</div>
+            <div className="note-box">
+                <div className="a-note">
+                    <h1 className="note-title">{this.state.note.notes_title}</h1>
+                    <p className="note-content">{this.state.note.notes_content}</p>
+                    <div className="note-buttonwrap">
+                        <div className="note-buttons" onClick={() => this.deleteButton()}>Delete Note?</div>
+                        <div className="note-buttons" onClick={() => this.updateButton()}>Update Note?</div>
+                    </div>
                 </div>
             </div>
         )

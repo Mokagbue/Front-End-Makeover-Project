@@ -39,16 +39,16 @@ class NoteUpdateForm extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="note-updateFormBox">
                 <h1>Update Note?</h1>
-                <form onSubmit={this.updatingNote}>
-                    <input type="text" placeholder="title" name="notes_title"
+                <form className="note-form" onSubmit={this.updatingNote}>
+                    <input className="input-title" type="text" placeholder="title" name="notes_title"
                         onChange={this.handleChange}
                         value={this.state.notes_title} />
-                    <textarea type="text" placeholder="your note here..." name="notes_content"
+                    <textarea className="input-content" type="text" placeholder="your note here..." name="notes_content"
                         onChange={this.handleChange}
                         value={this.state.notes_content} />
-                    <button type="submit">Update Note!</button>
+                    <button className="input-button" type="submit">Update Note!</button>
                 </form>
             </div>
         )

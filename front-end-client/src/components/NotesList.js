@@ -3,16 +3,15 @@ import { Link } from 'react-router-dom';
 
 function NotesList(props) {
     return (
-        <div>
-            <h1>My Notes!</h1>
-            <h2>Magic, Sparkle, Ponies!</h2>
-            <div>
+        <div className="list-wrap">
+            <h1 className="home-title">My Notes!</h1>
+            <div className="note-wrap">
                 {props.notes.map((note, index) => (
-                    <div key={index}>
+                    <div key={index} className="note-card">
                         <Link to={`/notes/${note.id}`}>
-                            <h3>{note.notes_title}</h3>
+                            <h3 className="note-title">{note.notes_title}</h3>
                         </Link>
-                        <p>{note.notes_content}</p>
+                        <p clasName="note-content">{note.notes_content}</p>
                     </div>
                 ))}
             </div>
