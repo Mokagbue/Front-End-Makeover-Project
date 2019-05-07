@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 
 class NoteDeleteForm extends Component {
-    constructor(props) {
-        super(props);
+    constructor() {
     }
     componentDidMount() {
         console.log('delete CDM');
